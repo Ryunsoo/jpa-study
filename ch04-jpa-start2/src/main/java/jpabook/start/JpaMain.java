@@ -57,6 +57,13 @@ public class JpaMain {
 
         //삭제
         em.remove(member);
-
+        
+        //Board
+        Board board = new Board();
+        board.setData("A");
+        
+        em.persist(board);
+        System.out.println("board.getId() : " + board.getId());
+        em.remove(board);
     }
 }
